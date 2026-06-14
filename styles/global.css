@@ -110,18 +110,6 @@ img {
     transform: translateY(-2px);
 }
 
-/* Fade-in on scroll animation */
-.fade-section {
-    opacity: 0;
-    transform: translateY(24px);
-    transition: opacity 700ms ease, transform 700ms ease;
-}
-
-.fade-section.is-visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
 /* Shared container width (but each page can define its own layout) */
 .site-header,
 .hero,

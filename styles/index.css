@@ -1,3 +1,44 @@
+/* ================================================== */
+/* KEYFRAMES */
+/* ================================================== */
+
+@keyframes loaderAnimation {
+    0%, 100% { stroke-dashoffset: 4000; }
+    50% { stroke-dashoffset: 0; }
+}
+
+/* ================================================== */
+/* LOADER */
+/* ================================================== */
+
+.loader {
+    position: fixed;
+    inset: 0;
+    z-index: 99;
+    pointer-events: auto;
+    background-color: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 
+		opacity 0.5s ease-in-out,
+        visibility 0.5s ease-in-out;
+}
+
+.loader svg path {
+    fill: transparent;
+    stroke: var(--text);
+    stroke-width: 2px;
+    stroke-dasharray: 4000;
+    stroke-dashoffset: 4000;
+    animation: loaderAnimation 6s ease-in-out;
+}
+
+main {
+	transform: translateY(48px);
+	opacity: 0;
+}
+
 /* styles/index.css */
 /* ----------------------------------------------
    INDEX.HOME PAGE SPECIFIC STYLES
